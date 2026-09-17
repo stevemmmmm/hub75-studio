@@ -311,7 +311,7 @@ lvgl:
               - label:
                   id: title_lbl_${uid}
                   width: 100%
-                  long_mode: SCROLL_CIRCULAR
+                  long_mode: WRAP
                   text: "[Title]"
                   styles: [st_spleen8, st_title_text]
 
@@ -324,14 +324,20 @@ lvgl:
               - label:
                   id: artist_lbl_${uid}
                   width: 100%
-                  long_mode: SCROLL
+                  long_mode: WRAP
                   text: "[Artist]"
                   styles: [st_spleen8, st_artist_text]
+
+              - obj:
+                  id: div_below_artist_${uid}
+                  width: 100%
+                  height: 1
+                  styles: [st_spacer_invisible]
 
               - label:
                   id: album_lbl_${uid}
                   width: 100%
-                  long_mode: SCROLL
+                  long_mode: WRAP
                   text: "[Album]"
                   styles: [st_spleen8, st_album_text]
 
@@ -342,11 +348,11 @@ lvgl:
                   flex_grow: 1
                   styles: [st_spacer_invisible]
 
-              - obj:
-                  id: div_above_progress_${uid}
-                  width: 100%
-                  height: 1
-                  styles: [st_divider]
+              #- obj:
+                  #id: div_above_progress_${uid}
+                  #width: 100%
+                  #height: 1
+                  #styles: [st_divider]
 
               - bar:
                   id: progress_bar_${uid}
